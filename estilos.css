@@ -1,0 +1,38 @@
+body {
+    background: linear-gradient(-45deg, #470508, #d33ce7, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    font-family: Arial;
+    background-size: auto 100vh;
+  }
+  
+  .menu li {
+     list-style: none;
+    }
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+    }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: yellow;
+  }
+  .site-title {
+    text-align: center;
+    color: whitesmoke;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    border-bottom: 1px solid whitesmoke;
+    }
+  
+  .site-subtitle {
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: whitesmoke;
+    font-style: italic;
+  }
+  
