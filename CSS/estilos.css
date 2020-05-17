@@ -1,38 +1,245 @@
+/* RESET CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;    
+}
+
 body {
-    background: linear-gradient(-45deg, #470508, #d33ce7, #23a6d5, #23d5ab);
-      background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
-    font-family: Arial;
-    background-size: auto 100vh;
+  background: linear-gradient(-45deg, #470508, #d33ce7, #23a6d5, #23d5ab);
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: gradient 15s ease infinite;
+}
+
+/* Se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  body {
+  font-size: 14px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 600px) {
+  body {
+  font-size: 18px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 1200px) {
+  body {
+  font-size: 20px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+}
+
+.menu li {
+  list-style: none;     
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: whitesmoke;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+}
+  
+a:hover {
+  color: rgb(6, 13, 105);
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);    
+}
+
+p {
+  color: black;
+  text-indent: 1.4em;
+  margin: 10px;
+  text-align: justify;
+  font-family: 'Ubuntu', sans-serif  
+}
+
+.sobre a {
+  color: white;
+  text-decoration: underline;
+}
+
+.avatar img {
+  float: left;
+  border-radius: 5%;
+  margin: 0 1em;
+}
+
+.projetos .grid {
+  display: grid;
+  gap: 2em;
+  justify-content: center;
+}
+
+@media (min-width: 560px) {
+  .projetos, .grid {
+  grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .projetos, .grid {
+  grid-template-columns: repeat(2, 260px);
+  align-content: center;
+  justify-content: center;
+  height: calc(100vh - 48px -8em);
+  }
+}
+
+  
+.projetos figure {
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+}
+
+.site-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 5em;
+  text-align: center;
+  color: whitesmoke;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  border-bottom: 1px solid whitesmoke;    
+}
+  
+.site-subtitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3em;
+  text-align: center;
+  -webkit-text-stroke-width: thin;
+  -webkit-text-stroke-color: rgb(131, 8, 8);    
+}
+
+.contato, .projetos h2, .sobre h2 {
+  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 1.5em;
+  text-align: center;    
+}
+  
+.img-portfolio {
+  height: 180px;
+  width: 240px;
+  object-fit: cover;
+  border-radius: 30px;
+  transform: scale(1);
+  transition: transform 500ms;
+}    
+
+h3 {
+  display: flex;
+  align-self: center;
+}
+
+.flip_card {
+  perspective: 800px;
+}
+
+.flip_card, .card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card_b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+  height: 180px;
+  width: 240px;
+  border-radius: 30px;
+  transform: rotateY(180deg);
+}
+
+.card_f, .card_b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+.sobre {
+  height: 100vh;
+}
+
+.projetos {
+  padding: 2em;
+  font-family: 'Anton', sans-serif;
+  height: 100vh;
+}  
+
+.contato {
+  height: 100vh;
+}
+
+.icons {
+  display: flex
+  text-align: center;  
+  justify-items: center;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 3em;
+}
+
+.contato a:active,
+.contato a:hover{
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgb(117, 5, 102);
+}
+
+#subirTopo {
+  text-decoration: none;
+  background: rgba(30,156,161,.9);
+  bottom: 30px;
+  right: 30px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: fixed;
+  border: 0;
+  font-family: sans-serif;
+  opacity: .8;
   }
   
-  .menu li {
-     list-style: none;
-    }
-  .menu ul {
-    display: flex;
-    justify-content: space-around;
-    }
-  a {
-    color: black;
-    text-decoration: none;
+  #subirTopo:hover {
+  opacity:1;
   }
-  
-  a:hover {
-    color: yellow;
-  }
-  .site-title {
-    text-align: center;
-    color: whitesmoke;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    border-bottom: 1px solid whitesmoke;
-    }
-  
-  .site-subtitle {
-    text-align: center;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: whitesmoke;
-    font-style: italic;
-  }
-  

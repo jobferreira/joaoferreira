@@ -1,21 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>João Ferreira</title>
-    <link rel="stylesheet" href="css/estilos.css"> 
-</head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>João Ferreira</title>
+	<link rel="stylesheet" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald&family=Ubuntu:ital@1&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/6d6952c5be.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+
+jQuery("#subirTopo").hide();
+
+jQuery('a#subirTopo').click(function () {
+         jQuery('body,html').animate({
+           scrollTop: 0
+         }, 800);
+        return false;
+   });
+
+jQuery(window).scroll(function () {
+         if (jQuery(this).scrollTop() > 500) {
+            jQuery('#subirTopo').fadeIn();
+         } else {
+            jQuery('#subirTopo').fadeOut();
+         }
+     });
+});
+</script>
+	</head>
 <body>
-    <header>
+	<header>
         <nav class="menu">
           <ul>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Portfólio</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
           </ul>
-        </nav>
-        <h1 class="site-title">João Ferreira</h1>
-        <h2 class="site-subtitle">Jr. Web Developer</h2>
-    </header>
+		</nav>
+		<div>
+        	<h1 class="site-title">João Ferreira</h1>
+			<h2 class="site-subtitle">Jr. Front-end Dev</h2>
+		</div>
+	</header>
+	<section class="sobre" id="sobre">
+		<h2>Sobre</h2>
+		<figure class="avatar"><img src="img/123j.PNG" alt=""></figure>
+		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt nostrum quis exercitationem debitis dolore laudantium laborum iste facere quibusdam, a rem. Pariatur, possimus ab modi atque harum a asperiores ex?</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi impedit a ducimus nihil cum nostrum assumenda repellendus at? Illum soluta laudantium a dolorem quae aspernatur deleniti et id ipsam ea.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ipsa aut nulla nobis sequi temporibus quam repudiandae ad debitis quae dolorem, cumque consequatur. Illum accusantium hic ratione modi quos dignissimos.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi impedit a ducimus nihil cum nostrum assumenda repellendus at? Illum soluta laudantium a dolorem quae aspernatur deleniti et id ipsam ea.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ipsa aut nulla nobis sequi temporibus quam repudiandae ad debitis quae dolorem, cumque consequatur. Illum accusantium hic ratione modi quos dignissimos.</p>
+		<p>Esta página pessoal foi idealizada durante o curso de <a href="https://www.alura.com.br/imersao-css">Imersão Hipster CSS</a>!</p>
+	</section>
+	<div>
+		<a id="subirTopo">
+			^ <br> Topo
+		</a>
+	</div>
+
+	<section class="projetos" id="projetos">
+		<h2>Projetos pessoais</h2>
+		<div class="grid">
+			<div class="flip_card">
+				<div class="card">
+					<figure class="card_f">
+						<a href="http://www.qualeareceita.com.br"><img class="img-portfolio" src="img/qear.png" alt="QEAR"></a>
+						<figcaption>QEAR</figcaption>
+					</figure>
+					<div class="card_b">
+						<h3>A receita na sua mão.</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="flip_card">
+				<div class="card">
+					<figure class="card_f">
+						<a href="http://www.lactoglu.com"><img class="img-portfolio" src="img/LOGO_OFICIAL.png" alt="LactoGlu"></a>
+						<figcaption>LactoGlu</figcaption>
+					</figure>
+					<div class="card_b">
+						<h3>Vivendo bem mesmo com restrições!</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="contato" id="contato">
+		<h2>Contato</h2>
+			<div class="icons">
+			<a target="_blank" href="https://github.com/jobferreira">
+				<i class="fab fa-github-square"></i>
+			</a>
+			<a target="_blank" href="https://twitter.com/jobferreira">
+				<i class="fab fa-twitter"></i>
+			</a>
+			<a target="_blank" href="https://linkedin.com/in/">
+				<i class="fab fa-linkedin"></i>
+			</a>
+			<a target="_blank" href="https://instagram.com/jobferreira22">
+				<i class="fab fa-instagram"></i>
+			</a>			
+		</div>
+	</section>
 </body>
 </html>
